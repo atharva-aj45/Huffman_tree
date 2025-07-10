@@ -59,7 +59,7 @@ string decodeText(Node* root, const string &encodedStr) {
 int main() {
     string text;
     cout << "Enter text to encode: ";
-    cin>>text;
+    getlint(cin,text);
 
     // Frequency map
     unordered_map<char, int> freq;
