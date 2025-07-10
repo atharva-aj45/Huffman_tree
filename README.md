@@ -35,6 +35,27 @@ The goal of the project is to implement a file compression Algorithm. And the fe
 7. Compression ratio is calculated and displayed.
 
 ---
+## Sample Input/Output
+
+```text
+Enter text to encode: hello world
+Huffman Codes:
+d: 000
+e: 001
+h: 010
+l: 011
+o: 10
+r: 1100
+w: 1101
+ : 111
+
+Encoded Text: 010001011011011111101101100000
+Decoded Text: hello world
+
+Original Size: 88 bits
+Compressed Size: 33 bits
+Compression Ratio: 37.5%
+```
 
 ## Applications
 1. Use to compress different files
