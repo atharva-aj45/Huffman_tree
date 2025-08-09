@@ -31,7 +31,10 @@ void generateCodes(Node* root, string code, unordered_map<char,string> &huffmanC
     if (!root)
         return;
     if (!root->left && !root->right) {
+        // Handle single-character special case
+        if (code == "") code = "0";
         huffmanCode[root->ch] = code;
+        return;
     }
     generateCodes(root->left, code + "0", huffmanCode);
     generateCodes(root->right, code + "1", huffmanCode);
@@ -59,7 +62,7 @@ string decodeText(Node* root, const string &encodedStr) {
 int main() {
     string text;
     cout << "Enter text to encode: ";
-    getlint(cin,text);
+    getline(cin,text);
 
     // Frequency map
     unordered_map<char, int> freq;
@@ -117,3 +120,4 @@ int main() {
 
     return 0;
 }
+
